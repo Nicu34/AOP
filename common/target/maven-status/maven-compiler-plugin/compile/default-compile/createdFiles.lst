@@ -1,0 +1,4 @@
+repository\SqlConnection.class
+repository\UserRepository.class
+model\SanguinGroupEnum.class
+model\User.class
