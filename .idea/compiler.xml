@@ -13,12 +13,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="common" />
         <module name="lab1" />
+        <module name="lab2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="AOP" target="1.5" />
       <module name="common" target="1.8" />
       <module name="lab1" target="1.8" />
+      <module name="lab2" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -4,12 +4,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class SqlConnection {
-
-    private static final Logger LOGGER = Logger.getLogger(SqlConnection.class.getName());
 
     private Connection connection;
 
@@ -19,7 +15,7 @@ public class SqlConnection {
 
     private static final String USERNAME = "root";
 
-    private static final String PASSWORD = "";
+    private static final String PASSWORD = "1234";
 
     public SqlConnection() throws SQLException {
         connection = getConnection();
@@ -27,11 +23,9 @@ public class SqlConnection {
 
         String dropSql = "DROP DATABASE " + DB_NAME;
         statement.executeUpdate(dropSql);
-        LOGGER.log(Level.INFO, "Dropped database" + DB_NAME + "successfully");
 
         String createSql = "CREATE DATABASE IF NOT EXISTS " + DB_NAME;
         statement.execute(createSql);
-        LOGGER.log(Level.INFO, "Created database" + DB_NAME + "successfully");
     }
 
     public Connection getConnection() throws SQLException {
